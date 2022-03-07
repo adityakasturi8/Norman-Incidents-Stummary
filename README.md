@@ -1,5 +1,19 @@
-> # Norman Incidents Summary
+> # Norman PD Incidents Summary
 ### Author : Aditya K Kasturi 
+
+__About:__
+- This project uses Python, Linux, and Unix commadline, Git, SQLite3, CSV or PDF data which utilizes PDF or CSV data from websites and process the data and store it into database for further analysis. For this project I have used Norman Police Department Daily Incidents Summary Data. The URL is mentioned below in Running the Porgram section. 
+
+__Libraries and Packages Used:__
+- os
+- sys
+- urlib
+- sqlite3
+- pytest
+- re
+- argparse
+
+> ### Description
 
 __Running the Program:__
 - The program can be run by utilizing the commandline.
@@ -18,4 +32,16 @@ __Result:__
 __Functions:__
 
 - In the main.py file, There are six functions:
+
+0. __main.py__ :  The main.py file calls all the functions from project0.py and executes the flow of the project.
+                  The main.py has all different funtions imported from the project0.py, it contains the following functions
+                  ```
+                  fetch_incidents()
+                  extract_incidents(incident_data)
+                  createdb()
+                  populatedb(db,incidents)
+                  statusdb()
+                  ```
+1. __fetch_incidents()__ : The fetch_incidents() funtion takes the url string and utilizes the python library urllib, and reads the data into the byte stream format.
+2. __extract_incidents(incident_data)__: extract_incidents(incident_data) takes theincident_data returned using the fetch_incidets() funtion. Here, The use of PyPDF2, which 
   
