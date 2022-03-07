@@ -36,12 +36,24 @@ __Functions:__
 0. __main.py__ :  The main.py file calls all the functions from project0.py and executes the flow of the project.
                   The main.py has all different funtions imported from the project0.py, it contains the following functions
                   ```
+                  
                   fetch_incidents()
+                  
                   extract_incidents(incident_data)
+                  
                   createdb()
+                  
                   populatedb(db,incidents)
+                  
                   statusdb()
                   ```
 1. __fetch_incidents()__ : The fetch_incidents() funtion takes the url string and utilizes the python library urllib, and reads the data into the byte stream format.
-2. __extract_incidents(incident_data)__: extract_incidents(incident_data) takes theincident_data returned using the fetch_incidets() funtion. Here, The use of PyPDF2, which 
+2. __extract_incidents(incident_data)__: extract_incidents(incident_data) takes theincident_data returned using the fetch_incidets() funtion. Here, The use of PyPDF2, which fetches the data, organizes it into the form of tuples and each field is separated by \n. 
+3. __createdb()__: Initially it does not take any input paraments,  it creates a table called incidents and it calls the funtions "db" here. The database is creted using sqlite3
+                  ```
+                  db = 'normanpd.db'
+                  ```
+4. __populatedb(db,incidents)__:  The function takes db and incident_data as an input and inserts them to the database table named incidents.
+5. __statusdb()__: This function takes input statements and fetches the summary of the data. 
+        
   
