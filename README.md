@@ -56,4 +56,32 @@ __Functions:__
 4. __populatedb(db,incidents)__:  The function takes db and incident_data as an input and inserts them to the database table named incidents.
 5. __statusdb()__: This function takes input statements and fetches the summary of the data. 
         
-  
+__Assumptions:__
+
+1. Expected same data in all rows across all the incidents sumamry
+
+__Bugs:__
+1. When extracting the text, there are few rows which does not contain the nature and ori of the incident, which fetched the datetime into the nature's column. Later, This was fixed. 
+2. There were few rows where the location mistakenly divided with \n, later fixed it.
+
+__Test_Cases__:
+- Every test funtion is tested with a passing case
+1. for ```test_fetch_incidents()``` one passing case is tested with mentioning the correct url
+2. for ```test_extract_incidents()```  one passing case is tested with the incident data which fetches with the funtion fetch_incidents(), and passed the test case
+3. for ```test_createdb()``` One passing case is tested by creating an ```example.db``` datbase in it
+4. for ```test_populatedb()``` a test case has passed by sending a passed test case to the creatdb()
+5. for ```test_statusdb()``` a correct database has been passed for the passing test case
+
+
+__How to install and use this packages:__
+0. Require prior installation of python, pip and requirements 
+1. Create a directory using ```mkdir``` and cd a ```project0```
+2. gitclone my repository ```https://github.com/adityakasturi8/cs5293sp22-project0.git```
+3. cd into the project directory ```cs5293sp22-project0/project0```
+4. install python package pipenv by typing ```pip install pipenv```
+5. install all the dependencies by typing ```pipenv install -r requirements.txt```
+6. run unit test using ```pipenv run pytest```
+7. run the main.py file using ```pipenv run python --incidents url``` 
+
+Note: The ```url``` can be found on the running the program section
+9. 
